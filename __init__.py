@@ -58,7 +58,7 @@ class FartingSkill(MycroftSkill):
         self.register_intent_file('random.intent', self.handle_random_intent)
 
         if AudioService:
-            self.audioservice = AudioService(self.emitter)
+            self.audioservice = AudioService(self.bus)
 
     def handle_request_intent(self, message):
         # play a randomly selected sound file
